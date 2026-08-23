@@ -17,9 +17,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: 'npm'
-          cache-dependency-path: bidrank/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install Dependencies
         run: npm ci
@@ -29,6 +29,6 @@ jobs:
 
       - name: Run Headless Verification Suite
         run: |
-          npm run start -p 3005 &
-          sleep 4
+          npm run start &
+          sleep 5
           APP_URL=http://localhost:3005 node scripts/headless-launch.mjs
