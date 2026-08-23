@@ -105,7 +105,7 @@ export default function ProjectDetailPage() {
 
   const isFirst = project.current_rank === 1;
   const isTop3 = project.current_rank <= 3;
-  const origin = typeof window !== "undefined" ? window.location.origin : "https://bidrank.io";
+  const origin = typeof window !== "undefined" ? window.location.origin : "https://bidrank.vercel.app";
   const badgeUrl = `${origin}/api/badge/${project.slug}`;
   const projectUrl = `${origin}/project/${project.slug}`;
 

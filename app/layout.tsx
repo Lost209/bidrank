@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || "https://bidrank.vercel.app"),
   title: "Bidrank – Pay-to-Rank Leaderboard for Indie Apps & Micro-SaaS",
   description:
     "The real-time pay-to-rank directory for indie hackers. Public leaderboard rank is determined strictly by cumulative bid. Instant live dofollow backlink, automatic URL scraping, and outbid alerts.",

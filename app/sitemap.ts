@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { store } from "@/lib/store";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://bidrank.io";
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "https://bidrank.vercel.app";
   const projects = store.getProjects();
 
   const projectUrls = projects.map((p) => ({
